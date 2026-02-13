@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background-image: url('../img/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .center-container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .char-small {
+      width: 200px;
+      height: auto;
+      max-width: 50vw; /* en móviles no será más ancho que la mitad de la pantalla */
+    }
+
+    .textbox-container {
+      position: relative;
+      margin-top: 50px;
+      width: 70vw;      /* ocupa casi todo el ancho de la pantalla */
+      max-width: 100vw;  /* en móviles se ajusta sin salirse */
+    }
+
+    .textbox {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .textbox-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      text-align: center;
+      color: #000;
+      font-size: 1.2rem;
+      font-family: lucida handwriting, cursive;
+    }
+
+    /* Ajustes específicos para pantallas de celular */
+    @media (max-width: 600px) {
+      .char-small {
+        width: 40vw;   /* personaje más proporcional a la pantalla */
+      }
+
+      .textbox-container {
+        width: 80vw;   /* cuadro de texto casi todo el ancho */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <img src="../img/cat_neutral.png" alt="neutral" class="char-small">
+    <div class="textbox-container">
+      <img src="../img/textbox.jpg" alt="Cuadro de texto" class="textbox">
+      <div class="textbox-text" id="textbox-text">Texto de prueba 1 incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+  </div>
+  <script src="../js/app.js"></script>
+</body>
+</html>

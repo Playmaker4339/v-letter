@@ -122,5 +122,4 @@ document.addEventListener('DOMContentLoaded', function () {
   showSlide(currentIndex);
 
   textboxContainer.addEventListener('click', nextSlide);
-  textboxContainer.addEventListener('touchstart', nextSlide, { passive: true });
 });
